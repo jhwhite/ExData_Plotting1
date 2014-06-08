@@ -8,4 +8,8 @@ data.sub.test <- paste(data.sub$Date, data.sub$Time, sep=" ")
 
 data.sub$Time <- strptime(data.sub.test, "%d/%m/%Y %H:%M:%S")
 
+png(file="plot2.png", width=480, height=480)
+
 plot(data.sub$Time, data.sub$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+
+dev.off()
